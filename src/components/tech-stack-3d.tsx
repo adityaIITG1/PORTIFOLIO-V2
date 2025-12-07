@@ -93,6 +93,20 @@ export function TechStack3D() {
         World.add(engine.world, mouseConstraint);
         render.mouse = mouse;
 
+        // Click Handler for AI Integration
+        Matter.Events.on(mouseConstraint, "mousedown", (event) => {
+            const mousePosition = event.mouse.position;
+            const bodies = Matter.Composite.allBodies(engine.world);
+            const clickedBody = Matter.Query.point(bodies, mousePosition)[0];
+
+            if (clickedBody && clickedBody.label) {
+                const event = new CustomEvent("trigger-ai-chat", {
+                    detail: { message: `Tell me about Aditya's experience with ${clickedBody.label}?` }
+                });
+                window.dispatchEvent(event);
+            }
+        });
+
         // Custom Rendering for Text (Hack to draw text on bodies)
         Matter.Events.on(render, "afterRender", () => {
             const context = render.context;

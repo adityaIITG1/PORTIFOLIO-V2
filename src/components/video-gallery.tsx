@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 import { GlassCard } from "./ui/glass-card";
 import { Play } from "lucide-react";
+import { VideoModal } from "./video-modal";
 
 export interface Video {
     id: string;
@@ -15,6 +16,8 @@ interface VideoGalleryProps {
 }
 
 export function VideoGallery({ videos, title }: VideoGalleryProps) {
+    const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+
     // Ensure the requested video is first
     const sortedVideos = [
         { id: "ipcPGVNjQjA", title: "IIT Guwahati Live Project", description: "Real-time performance and AI integration demo." },
@@ -43,6 +46,7 @@ export function VideoGallery({ videos, title }: VideoGalleryProps) {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        onClick={() => setSelectedVideo(video)}
                     >
                         <GlassCard className="w-full h-full p-0 overflow-hidden border-0 bg-black/40">
                             <iframe
@@ -74,6 +78,14 @@ export function VideoGallery({ videos, title }: VideoGalleryProps) {
             <p className="text-center text-gray-500 text-sm mt-4 flex items-center justify-center gap-2">
                 <span className="animate-pulse">←</span> Swipe to explore <span className="animate-pulse">→</span>
             </p>
+
+            {/* Video Modal */}
+            <VideoModal
+                isOpen={!!selectedVideo}
+                onClose={() => setSelectedVideo(null)}
+                videoId={selectedVideo?.id || ""}
+                title={selectedVideo?.title || ""}
+            />
         </div>
     );
 }

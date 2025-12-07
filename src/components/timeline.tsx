@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 const experiences = [
     {
         year: "NOW",
-        title: "Freelance Full Stack Developer",
-        company: "Self-Employed",
-        description: "Delivered full-stack solutions for 10+ clients, handling everything from UI/UX to backend, deployment, SEO, and performance optimization.",
+        title: "Gen AI Prompt Engineer & YouTuber",
+        company: "BS IITIAN (7K+ Subs)",
+        description: "Creating educational content on AI, Data Science, and Tech. Specializing in Prompt Engineering and building Gen AI applications.",
         color: "text-purple-400",
         glow: "shadow-[0_0_20px_rgba(168,85,247,0.5)]"
     },
     {
-        year: "Dec 2025",
-        title: "Full Stack Developer",
-        company: "ZeroDayArena",
-        description: "Developed and maintained full-stack web applications, working on both frontend and backend systems. Collaborated with cross-functional teams.",
+        year: "2028",
+        title: "Aspiring Data Scientist & AI/ML Engineer",
+        company: "Future Goal",
+        description: "Building a strong foundation in Machine Learning, Deep Learning, and Scalable Systems to solve real-world problems.",
         color: "text-blue-400",
         glow: "shadow-[0_0_20px_rgba(96,165,250,0.5)]"
     },
     {
         year: "2024",
-        title: "Data Science Intern",
-        company: "IIT Guwahati",
-        description: "Worked on advanced computer vision models and real-time data processing pipelines.",
+        title: "Dual Degree Student",
+        company: "AKTU & IIT Guwahati",
+        description: "Pursuing B.Tech in CSE (AI & ML) at AKTU (2nd Year) while simultaneously mastering Data Science at IIT Guwahati.",
         color: "text-green-400",
         glow: "shadow-[0_0_20px_rgba(74,222,128,0.5)]"
     }
@@ -61,6 +61,17 @@ export function Timeline() {
                                 <p className="text-gray-400 text-sm leading-relaxed relative z-10 max-w-md">
                                     {exp.description}
                                 </p>
+                                <button
+                                    onClick={() => {
+                                        const event = new CustomEvent("trigger-ai-chat", {
+                                            detail: { message: `What did Aditya achieve at ${exp.company}?` }
+                                        });
+                                        window.dispatchEvent(event);
+                                    }}
+                                    className="mt-3 text-xs flex items-center gap-1 text-primary hover:text-white transition-colors relative z-10"
+                                >
+                                    ✨ Ask AI to analyze this role
+                                </button>
                             </div>
                         </div>
 

@@ -92,7 +92,7 @@ export function Hero() {
                     transition={{ duration: 0.5 }}
                 >
                     <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 backdrop-blur-md">
-                        🚀 Aspiring Data Science & AI ML Engineer
+                        🚀 Gen AI Prompt Engineer & Aspiring Data Scientist
                     </span>
                 </motion.div>
 

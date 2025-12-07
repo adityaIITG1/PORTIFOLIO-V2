@@ -103,7 +103,7 @@ export function About() {
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-bold">Aditya Kumar Singh</h3>
-                                    <p className="text-primary font-medium">Data Science & AI Undergraduate | Building ETL Pipelines & Scalable Systems ⚡</p>
+                                    <p className="text-primary font-medium">Gen AI Prompt Engineer | YouTuber @ BS IITIAN | Aspiring Data Scientist ⚡</p>
                                     <div className="flex items-center gap-2 text-sm text-gray-400 mt-1">
                                         <MapPin className="w-4 h-4" /> Prayagraj, Uttar Pradesh
                                     </div>
@@ -121,11 +121,11 @@ export function About() {
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li className="flex items-start gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                        <span>BSc Hons in Data Science & AI - IIT Guwahati (2nd Year)</span>
+                                        <span>B.Tech in CSE (AI & ML) - AKTU (2024-2028)</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 shrink-0" />
-                                        <span>B.Tech in CSE (AI & ML) - AKTU</span>
+                                        <span>BSc Hons in Data Science & AI - IIT Guwahati</span>
                                     </li>
                                 </ul>
                             </div>
