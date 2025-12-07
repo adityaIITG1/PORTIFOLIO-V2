@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { GlassCard } from "./ui/glass-card";
 import { Code, Cpu, Globe, Zap, MapPin, GraduationCap } from "lucide-react";
 import { VideoGallery } from "./video-gallery";
+import { TechStack3D } from "./tech-stack-3d";
+import { Timeline } from "./timeline";
 
 const stats = [
     { label: "Projects Delivered", value: "5+" },
@@ -108,11 +110,9 @@ export function About() {
                                 </div>
                             </div>
 
-                            <p className="text-gray-300 mb-6 leading-relaxed">
-                                <strong>Verified Dual-Degree Scholar: IIT Guwahati (Data Science) & AKTU (CSE).</strong>
-                                <br /><br />
-                                Pursuing a rigorous parallel education: building foundational CS theory via B.Tech at AKTU while specializing in advanced AI/Data Science at IIT Guwahati. Verified student with a focus on scalable Data Engineering and Machine Learning pipelines. Bridging the gap between academic research and production-grade software engineering.
-                            </p>
+                            <div className="mb-8">
+                                <Timeline />
+                            </div>
 
                             <div className="mb-6">
                                 <h4 className="text-lg font-semibold mb-2 flex items-center gap-2">
@@ -177,18 +177,9 @@ export function About() {
                             ))}
                         </div>
 
-                        <GlassCard>
-                            <h4 className="text-lg font-semibold mb-4">Tech Stack</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {skills.map((skill) => (
-                                    <span
-                                        key={skill}
-                                        className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium hover:bg-white/10 transition-colors"
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
+                        <GlassCard className="overflow-hidden">
+                            <h4 className="text-lg font-semibold mb-4">Tech Stack (Interactive)</h4>
+                            <TechStack3D />
                         </GlassCard>
                     </div>
                 </div>

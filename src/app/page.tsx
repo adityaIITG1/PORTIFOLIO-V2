@@ -5,7 +5,7 @@ import { About } from "../components/about";
 import { Projects } from "../components/projects";
 import { Contact } from "../components/contact";
 import { GithubShowcase } from "../components/github-showcase";
-import { LinkedInShowcase } from "../components/linkedin-showcase";
+
 import { SpotlightEffect } from "../components/spotlight-effect";
 import { AiChatbot } from "../components/ai-chatbot";
 import { VoiceControl } from "../components/voice-control";
@@ -20,7 +20,7 @@ export default function Home() {
       <AiChatbot />
       <Hero />
       <About />
-      <LinkedInShowcase />
+
       <GithubShowcase />
       <Projects />
       <Contact />

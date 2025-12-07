@@ -77,9 +77,24 @@ export function AiChatbot() {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(true)}
                 initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{
+                    opacity: 1,
+                    scale: 1,
+                    boxShadow: ["0px 0px 0px 0px rgba(59, 130, 246, 0.7)", "0px 0px 20px 10px rgba(59, 130, 246, 0)"]
+                }}
+                transition={{
+                    boxShadow: {
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "loop"
+                    }
+                }}
             >
                 <MessageSquare className="w-6 h-6" />
+                <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
             </motion.button>
 
             {/* Chat Window */}
@@ -122,8 +137,8 @@ export function AiChatbot() {
                                     >
                                         <div
                                             className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.sender === "user"
-                                                    ? "bg-primary text-white rounded-br-none"
-                                                    : "bg-white/10 text-gray-200 rounded-bl-none border border-white/5"
+                                                ? "bg-primary text-white rounded-br-none"
+                                                : "bg-white/10 text-gray-200 rounded-bl-none border border-white/5"
                                                 }`}
                                         >
                                             {msg.text}
