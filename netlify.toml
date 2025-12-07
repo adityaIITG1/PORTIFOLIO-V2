@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  GIT_SUBMODULE_STRATEGY = "none"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
