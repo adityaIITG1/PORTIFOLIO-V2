@@ -4,7 +4,7 @@ import { Hero } from "../components/hero";
 import { About } from "../components/about";
 import { Projects } from "../components/projects";
 import { Contact } from "../components/contact";
-import { GithubShowcase } from "../components/github-showcase";
+import { ProjectShowcase } from "../components/project-showcase";
 
 import { SpotlightEffect } from "../components/spotlight-effect";
 import { AiChatbot } from "../components/ai-chatbot";
@@ -20,8 +20,7 @@ export default function Home() {
       <AiChatbot />
       <Hero />
       <About />
-
-      <GithubShowcase />
+      <ProjectShowcase />
       <Projects />
       <Contact />
 
